@@ -359,7 +359,10 @@ function ConvexHullMobile()
                 <Text fontSize={"2xl"}>
                     Number of points
                 </Text>
-                <NumberInput marginTop={"15px"} width={"25%"} defaultValue={15} min={5} max={20} onChange={(string) => {pointsNumber.current = parseInt(string);}}>
+                <NumberInput marginTop={"15px"} width={"25%"} defaultValue={15} min={5} max={20} onChange={(string) => {
+                        pointsNumber.current = parseInt(string);
+                        points.current.forEach( (p) => {p.color = colorMode === "dark" ? "white" : "black"});
+                    }}>
                     <NumberInputField />
                         <NumberInputStepper>
                             <NumberIncrementStepper />
@@ -371,7 +374,10 @@ function ConvexHullMobile()
                 <Text fontSize={"2xl"}>
                     Animation delay
                 </Text>
-                <NumberInput marginTop={"15px"} width={"25%"} defaultValue={100} min={0} max={1000} onChange={(string) => {delayTime.current = parseInt(string);}}>
+                <NumberInput marginTop={"15px"} width={"25%"} defaultValue={100} min={0} max={1000} onChange={(string) => {
+                        delayTime.current = parseInt(string);
+                        points.current.forEach( (p) => {p.color = colorMode === "dark" ? "white" : "black"});
+                    }}>
                     <NumberInputField />
                         <NumberInputStepper>
                             <NumberIncrementStepper />
