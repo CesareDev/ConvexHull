@@ -1,17 +1,17 @@
 import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
-import ConvexHull from './ConvexHull'
+import DeviceDetector from './DeviveDetector'
 
 function App() 
 {
     return (
-        <ChakraProvider theme={extendTheme({config: {
+        <ChakraProvider 
+                theme={extendTheme({config: {
                 useSystemColorMode: true,
                 initialColorMode: "dark", // 'dark' | 'light'
-                disableTransitionOnChange: false 
-            }
+                disableTransitionOnChange: false }
         })}>
             <ColorModeScript initialColorMode={"dark"}/>
-            <ConvexHull />
+            <DeviceDetector />
         </ChakraProvider>
     )
 }
