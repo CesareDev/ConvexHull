@@ -404,6 +404,10 @@ function ConvexHull()
                         maxW={canvasWidth + "px"} 
                         maxH={canvasHeigth + "px"}
                         onClick={(e) => {
+                            if (started.current)
+                                return;
+                            points.current.forEach( (p) => {p.color = colorMode === "dark" ? "white" : "black"});
+                            lines.current = [];
                             let p = new Point(getMousePosRelativeX(e.clientX), canvasHeigth - getMousePosRelativeY(e.clientY));
                             if (canPlace(p))
                             {
