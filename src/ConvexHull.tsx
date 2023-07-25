@@ -146,6 +146,7 @@ function ConvexHull()
         for (let i = 0; i < points.current.length; ++i)
         {
             points.current[i].index = i;
+            points.current[i].color = colorMode === "dark" ? "white" : "black";
         }
     }
 
@@ -426,7 +427,7 @@ function ConvexHull()
                             <Box 
                                 className={"node" + index}
                                 key={index} 
-                                backgroundColor={point.color === undefined ? colorMode === "dark" ? "white" : "black" : point.color} 
+                                backgroundColor={point.color !== "red" ? colorMode === "dark" ? "white" : "black" : point.color} 
                                 width={(radius * 2) + "px"}
                                 height={(radius * 2) + "px"}
                                 borderRadius={radius + "px"}
