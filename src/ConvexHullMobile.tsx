@@ -336,7 +336,7 @@ function ConvexHullMobile()
             <VStack>
                 <Heading size="3xl" noOfLines={2}>
                     Convex Hull Visualization
-                    <Link href='https://en.wikipedia.org/wiki/Convex_hull' isExternal>
+                    <Link title='Wikipedia' href='https://en.wikipedia.org/wiki/Convex_hull' isExternal>
                         <Icon as={BsFillInfoCircleFill} boxSize={6} marginLeft={"10px"}/>
                     </Link>
                 </Heading>

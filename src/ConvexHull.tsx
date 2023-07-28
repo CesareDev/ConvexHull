@@ -333,7 +333,7 @@ function ConvexHull()
                 <GridItem area={"header"} padding={"15px"}>
                     <Heading size="3xl" noOfLines={1}>
                         Convex Hull Visualization
-                        <Link href='https://en.wikipedia.org/wiki/Convex_hull' isExternal>
+                        <Link title='Wikipedia' href='https://en.wikipedia.org/wiki/Convex_hull' isExternal>
                             <Icon as={BsFillInfoCircleFill} boxSize={6} marginLeft={"10px"}/>
                         </Link>
                     </Heading>
